@@ -88,11 +88,11 @@ const option::Descriptor usage[] =
   {HELP,    0,"" , "help",
     option::Arg::None, "  --help  \tPrint usage and exit." },
   {PROBE_LENGTH, 0, "k","",
-    Arg::Numeric,      "  -k=INT      \ttags length" },
+    Arg::Numeric,      "  -k INT      \ttags length" },
   {MAX_READS, 0, "m","",
-    Arg::Numeric,      "  -m=INT      \tmax number of reads" },
-  {NB_THREADS, 0, "t","",
-    Arg::Numeric,      "  -t=INT      \tnumber of threads" },
+    Arg::Numeric,      "  -m INT      \tmax number of reads" },
+  //{NB_THREADS, 0, "t","",
+  //  Arg::Numeric,      "  -t=INT      \tnumber of threads" },
   {STRANDED,    0,"" , "stranded",
     option::Arg::None, "  --stranded  \tstrand-specific protocol" },
   {NORMALIZE,    0,"" , "normalize",
@@ -173,9 +173,9 @@ int main (int argc, char *argv[]) {
     max_reads = atoi(options[MAX_READS].arg);
   }
 
-  if (options[NB_THREADS]) {
-    nb_threads = atoi(options[NB_THREADS].arg);
-  }
+  //if (options[NB_THREADS]) {
+  //  nb_threads = atoi(options[NB_THREADS].arg);
+  //}
 
   if (options[STRANDED]) {
     stranded = true;
